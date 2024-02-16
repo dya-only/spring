@@ -1,4 +1,4 @@
-package oop1.ex;
+package oop1.ex.rectangle;
 
 public class Rectangle {
     int width;

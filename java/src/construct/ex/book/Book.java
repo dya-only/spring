@@ -1,4 +1,4 @@
-package construct.ex;
+package construct.ex.book;
 
 public class Book {
     String title;

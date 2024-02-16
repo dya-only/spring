@@ -1,4 +1,4 @@
-package oop1.ex;
+package oop1.ex.account;
 
 public class Account {
     int balance;  // 잔액
