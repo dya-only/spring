@@ -1,4 +1,4 @@
-package codes.dya.spring.domain.controller;
+package codes.dya.spring.domain.hello;
 
 import lombok.Getter;
 import lombok.Setter;
