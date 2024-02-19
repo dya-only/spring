@@ -2,12 +2,12 @@ package codes.dya.spring.domain.member.service;
 
 import codes.dya.spring.domain.member.Member;
 import codes.dya.spring.domain.member.repository.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
