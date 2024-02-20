@@ -1,7 +1,6 @@
 package codes.dya.spring.domain.member.repository;
 
 import codes.dya.spring.domain.member.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
