@@ -3,6 +3,7 @@ package codes.dya.spring.domain.member.service;
 import codes.dya.spring.domain.member.Member;
 import codes.dya.spring.domain.member.repository.MemberRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;

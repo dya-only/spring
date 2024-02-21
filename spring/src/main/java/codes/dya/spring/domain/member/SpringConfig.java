@@ -1,9 +1,7 @@
 package codes.dya.spring.domain.member;
 
-import codes.dya.spring.domain.member.repository.JpaMemberRepository;
 import codes.dya.spring.domain.member.repository.MemberRepository;
 import codes.dya.spring.domain.member.service.MemberService;
-import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,27 +9,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
 
-    private final EntityManager em;
+//    private final EntityManager em;
+    private final MemberRepository memberRepository;
 
     @Autowired
-    public SpringConfig(EntityManager em) {
-        this.em = em;
+    public SpringConfig(MemberRepository memberRepository) {
+//        this.em = em;
+        this.memberRepository = memberRepository;
     }
 
     @Bean
     public MemberService memberService() {
-        return new MemberService(memberRepository());
+        return new MemberService(memberRepository);
     }
 
-    // MemoryRepository
 //    @Bean
 //    public MemberRepository memberRepository() {
-//        return new MemoryMemberRepository();
+// //        return new MemoryMemberRepository();  // MemoryRepository
+// //        return new JpaMemberRepository(em);  // JpaRepository
 //    }
-
-    // JpaRepository
-    @Bean
-    public MemberRepository memberRepository() {
-        return new JpaMemberRepository(em);
-    }
 }
